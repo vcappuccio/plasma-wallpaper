@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plasma Wallpaper</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="plasma-canvas"></canvas>
+    <script src="js/plasma.js"></script>
+    <script>
+        window.onload = function() {
+            const canvas = document.getElementById('plasma-canvas');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const initialColors = ['#ff0000', '#00ff00', '#0000ff'];
+            animatePlasma(canvas, canvas.width, canvas.height, initialColors, 0.1, 5000); // Change colors every 5000 ms (5 seconds)
+        };
+    </script>
+</body>
+</html>
